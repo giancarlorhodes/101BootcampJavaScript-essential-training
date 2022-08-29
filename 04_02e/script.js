@@ -6,7 +6,7 @@
 import Backpack from "./Backpack.js";
 
 const everydayPack = new Backpack(
-  "Everyday Pack",
+  "Giancarlo's Everyday Pack",
   30,
   "grey",
   15,
@@ -16,7 +16,8 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
-const content = "<h1>" + everydayPack.name + "</h1>";
+const content = "<h1>" + everydayPack.name + "</h1>";  // old syntax
+//const content = `<h1>${everydayPack.name}</h1>`; // new syntax, notice back ticks and $ not quotes
 
 document.body.innerHTML = content;
 
