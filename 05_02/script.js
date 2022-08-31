@@ -18,9 +18,10 @@ const everydayPack = new Backpack(
   "../assets/images/everyday.svg"
 );
 
-const main = document.querySelector(".maincontent");
+const main = document.querySelector(".maincontent"); // looking for a class
 
-const content = `
+// because we use back ticks we can use template literals here
+const content = `    
   <article class="backpack" id="everyday">
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
