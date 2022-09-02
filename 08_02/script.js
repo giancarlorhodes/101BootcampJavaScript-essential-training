@@ -13,6 +13,7 @@ function doSomeMath(a, b) {
 }
 
 // Function expression:
+// preferred pattern
 const doMoreMath = function (a = 3, b = 2) {
   let c = a * b;
   return c;
@@ -29,6 +30,9 @@ console.log ("x is typeof " + typeof x);
 
 console.log("Do some math:", doSomeMath(5, 6));
 console.log("Do more math:", doMoreMath(5, 6));
+
+
+const yyy = (a, b) => { return a + b;}
 
 // Immediately Invoked Function Expression (IIFE)
 // (function () {
