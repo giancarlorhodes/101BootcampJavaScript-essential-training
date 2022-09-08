@@ -16,9 +16,14 @@ const greenPack = {
     console.log("this.volume in the method:", this.volume);
     this.volume = volume;
     console.log("this.volume after update:", this.volume);
+
+    // hoisted to the global scope
+    // called a function expression
     (function () {
-      console.log("this.volume in nested function:", this.volume);
+      console.log("this.volume in nested function:", this.volume); // outputs 20
     })();
+
+    // arrow function scope in local, where will we get local volume
     (() => {
       console.log("this.volume in arrow function:", this.volume);
     })();
