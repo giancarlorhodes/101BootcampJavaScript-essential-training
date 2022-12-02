@@ -10,6 +10,8 @@ const greenPack = {
   pocketNum: 3,
 };
 
+
+// function expression
 const addPack = function (currentPack) {
   const newArticle = document.createElement("article");
   newArticle.innerHTML = `
@@ -28,3 +30,6 @@ function x (y){}
 
 const main = document.querySelector("main");
 main.append(addPack(greenPack));
+
+
+console.log(addPack(greenPack));
