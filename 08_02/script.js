@@ -14,10 +14,19 @@ function doSomeMath(a, b) {
 
 // Function expression:
 // preferred pattern
-const doMoreMath = function (a = 3, b = 2) {
+
+var doMoreMath = function (a = 3, b = 2) {
   let c = a * b;
   return c;
 };
+
+// could do this
+// var above is underwritten
+// arrow function
+const doMoreMath = (a=3,b=2) => {
+  let c = a * b;
+  return c;
+}
 
 const x = doMoreMath;
 
@@ -34,10 +43,10 @@ console.log("Do more math:", doMoreMath(5, 6));
 
 const yyy = (a, b) => { return a + b;}
 
-// Immediately Invoked Function Expression (IIFE)
-// (function () {
-//   let a = 4;
-//   let b = 6;
-//   let c = doSomeMath(a, b);
-//   console.log(`The sum of a and b is: ${c}`);
-// })();
+//Immediately Invoked Function Expression (IIFE)
+(function () {
+  let a = 4;
+  let b = 6;
+  let c = doSomeMath(a, b);
+  console.log(`The sum of a and b is: ${c}`);
+})(); // outside () calls this immediately
