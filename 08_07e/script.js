@@ -3,6 +3,9 @@
  * @link https://developer.mozilla.org/en-US/docs/Glossary/Function
  */
 
+
+// this is not commented well 
+// what is prefix ??
 const tipCalculator = (sum, percentage, currency, prefix) => {
   let tip = sum * (percentage / 100);
   let total = sum + tip;
