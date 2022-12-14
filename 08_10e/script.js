@@ -52,4 +52,5 @@ const tipCalculator = (sum, percentage, locale, currency, printHTML) => {
   printHTML(finalTip);
 };
 
+// we call printHTML without the parentheses in the end
 tipCalculator(29.95, 18, "de-DE", "EUR", printHTML);

@@ -5,7 +5,8 @@
  */
 
 
-class _Image{
+class _Image
+{
   constructor(
     inUri,
     inDescription
@@ -21,7 +22,7 @@ class _Image{
    description: "add a image description here"
   };
 
-
+// using a class template
   const image2 = new _Image("https://www.w3schools.com/js/objectExplained.gif", "a car on w3 schools");
  
  // exercise 08_09 practice 
