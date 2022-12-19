@@ -20,13 +20,15 @@ stuff.forEach((item) => {
 article.append(stuffList)
 
 
-const stuffItems = stuff.map((item) => {
+const stuffItems = stuff.map((x) => {
 
   let listItem = document.createElement("li");
-  listItem.innerHTML = item;
+  listItem.innerHTML = x;
   return listItem;
 
 });
 
 console.log("stuff: ", stuff);
 console.log("stuffItems: ", stuffItems);
+
+

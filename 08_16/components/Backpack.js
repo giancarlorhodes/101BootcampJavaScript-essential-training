@@ -1,4 +1,5 @@
 // Set up the Backpack class
+// JS class template
 class Backpack {
   constructor(
     id,
