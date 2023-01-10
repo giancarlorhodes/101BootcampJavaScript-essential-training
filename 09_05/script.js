@@ -9,7 +9,7 @@ import backpackObjectArray from "./components/data.js";
  * Add event listener to the lid-toggle button.
  */
 const lidToggle = function () {
-   
+  
   // Find the current backpack object in backpackObjectArray
   let backpackObject = backpackObjectArray.find( ({ id }) => id === this.parentElement.id );
   
@@ -72,10 +72,21 @@ const backpackList = backpackObjectArray.map((backpack) => {
   const button = backpackArticle.querySelector(".lid-toggle")
   const status = backpackArticle.querySelector(".backpack__lid span")
 
-  button.addEventListener("click", (event) => {
-    console.log(event)
-    status.innerText === "open" ? status.innerText = "closed" : status.innerText = "open"
+
+   // arrow functions do not have their own "this", function declarations do
+  // button.addEventListener("click", (event) => {
+  //   console.log(event)
+  //   status.innerText === "open" ? status.innerText = "closed" : status.innerText = "open"
+  // })
+
+  button.addEventListener("click", function(event) {
+    console.log(event);
+    status.innerText === "open" ? status.innerText = "closed" : status.innerText = "open";
+    this.innerText === "Open lid" ? this.innerText = "Close lid" : this.innerText = "Open lid";
   })
+
+
+  //button.addEventListener("click", lidToggle)
 
   return backpackArticle;
 });
